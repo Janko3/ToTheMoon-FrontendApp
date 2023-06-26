@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToTheMoon Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="header">
+        <ul class="nav">
+          <li><a href="http://localhost:4200/home">Home</a></li>
+          <li><a href="http://localhost:4200/profile" class="active">Profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+  <div class="container">
+    <h2>{{user.firstName}} {{user.lastName}}</h2>
+  
+    <div class="profile-pic-container">
+        <div class="profile-pic">
+          <i class="fas fa-user"></i>
+        </div>
+        <input type="file" id="profile-pic-input" accept="image/*">
+        <label for="profile-pic-input" class="upload-button">Upload</label>
+      </div>
+      <div class="info">
+        <p><strong>Username:</strong> {{user.username}}</p>
+        <p><strong>Email:</strong> {{user.email}}</p>
+      </div>
+  </div>
+</body>
+</html>
+
