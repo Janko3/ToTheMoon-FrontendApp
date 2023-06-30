@@ -4,7 +4,7 @@ import User from "./user"
 export interface Post {
     id: number
     content:String
-    postedBy: User
+    userDTO: User
     imagePaths: string[]
     totalComments: number 
     comments: Comment

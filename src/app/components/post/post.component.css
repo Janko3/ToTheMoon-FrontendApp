@@ -1,0 +1,33 @@
+.post {
+  background-color: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #657786;
+}
+
+.post-author {
+  margin-right: 10px;
+}
+
+.post-date {
+  color: #657786;
+  margin: 10px;
+}

@@ -31,7 +31,17 @@ export class HomeComponent {
 
   onSubmit() {
     const content = this.createPostForm.get('content')?.value;
-    this.postService.createPost(content);
+    this.postService.createPost(content).subscribe({
+      next(value) {
+        console.log(value);
+
+        
+      },
+      error(err){
+        console.log(err);
+        
+      }
+    });
     this.posts.unshift({ content });
     this.createPostForm.reset();
   }

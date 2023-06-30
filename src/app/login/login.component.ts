@@ -24,10 +24,7 @@ export class LoginComponent {
     
     const username = this.loginForm.get('username')?.value;
     const password = this.loginForm.get('password')?.value;
-    this.authService.login(username, password).subscribe(data => {
-      this.userService.whoAmI().subscribe();
-     this.router.navigate(['home'])
-    })
+    this.authService.login(username, password);
 //    this.router.navigate(['home'])
 
   }

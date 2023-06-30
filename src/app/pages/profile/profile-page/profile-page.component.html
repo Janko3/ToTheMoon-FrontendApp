@@ -13,7 +13,7 @@
         <ul class="nav">
           <li><a href="http://localhost:4200/home">Home</a></li>
           <li><a href="http://localhost:4200/profile" class="active">Profile</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><app-logout></app-logout></li>
         </ul>
       </div>
   <div class="container">
@@ -26,10 +26,11 @@
         <input type="file" id="profile-pic-input" accept="image/*">
         <label for="profile-pic-input" class="upload-button">Upload</label>
       </div>
-      <div class="info">
-        <p><strong>Username:</strong> {{user.username}}</p>
+      <div class="info" *ngIf="user">
+        <p *ngIf="user.username"><strong>Username:</strong> {{user.username}}</p>
         <p><strong>Email:</strong> {{user.email}}</p>
       </div>
+     <app-post *ngFor="let post of posts" [post]="post"></app-post>
   </div>
 </body>
 </html>
