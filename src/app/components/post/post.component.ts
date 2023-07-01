@@ -11,11 +11,13 @@ import { UserService } from 'src/app/service/user/user.service';
 })
 export class PostComponent {
   loggedUser!: User;
-  @Input() post!: Post 
-  constructor(private postService: PostService,private userService: UserService){
+  @Input() post!: Post;
+  isEditing!: boolean;
+  
+  constructor(private postService: PostService,private userService: UserService){}
 
-  }
   ngOnInit() {
     this.userService.whoAmI().subscribe(data => this.loggedUser = data);
+    this.isEditing = false;
   }
 }

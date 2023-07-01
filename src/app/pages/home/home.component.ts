@@ -29,7 +29,7 @@ export class HomeComponent {
     this.userService.whoAmI().subscribe(data => this.user = data);
   }
 
-  onSubmit() {
+  onSubmitAdd() {
     const content = this.createPostForm.get('content')?.value;
     this.postService.createPost(content).subscribe({
       next(value) {
@@ -45,6 +45,7 @@ export class HomeComponent {
     this.posts.unshift({ content });
     this.createPostForm.reset();
   }
+  
 }
 
 

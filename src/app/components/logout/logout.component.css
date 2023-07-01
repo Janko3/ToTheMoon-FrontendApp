@@ -1,6 +1,6 @@
 button{
-    background-color: red;
-    text-decoration: none;
-    color: #333333;
+    background: unset;
+    color: gray;
     font-weight: bold;
+    border: unset;
 }

@@ -1,8 +1,17 @@
 <div class="post">
   <div class="post-content"></div>
   <div class="post-meta">
-    <span class="post-author">{{ post.userDTO.username }}</span>
-    <span class="content">{{ post.content }}</span>
-    <span class="post-date">{{ post.creationDate }}</span>
+    <ng-container *ngIf="isEditing; else viewMode">
+      <span class="post-author">{{ post.user.username }}</span>
+      <input class="content" [value]="post.content" />
+      <span class="post-date">{{ post.creationDate.slice(0, 16) }}</span>
+    </ng-container>
+    <ng-template #viewMode>
+      <span class="post-author">{{ post.user.username }}</span>
+      <span class="content">{{ post.content }}</span>
+      <span class="post-date">{{ post.creationDate.slice(0, 16) }}</span>
+    </ng-template>    
+    <app-update-btn  [post]="post" ></app-update-btn>
+    <app-delete-btn [postId]="post.id"></app-delete-btn>
   </div>
 </div>

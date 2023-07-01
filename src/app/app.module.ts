@@ -14,6 +14,9 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptorService } from './service/interceptor/token-interceptor.service';
 import { PostComponent } from './components/post/post.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { DeleteBtnComponent } from './components/deleteBtn/delete-btn/delete-btn.component';
+import { HeaderComponent } from './components/header/header/header.component';
+import { UpdateBtnComponent } from './components/updateBtn/update-btn/update-btn.component';
 
 
 @NgModule({
@@ -26,6 +29,9 @@ import { LogoutComponent } from './components/logout/logout.component';
     ProfilePageComponent,
     PostComponent,
     LogoutComponent,
+    DeleteBtnComponent,
+    HeaderComponent,
+    UpdateBtnComponent,
     
   ],
   imports: [

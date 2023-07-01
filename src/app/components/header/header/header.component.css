@@ -1,0 +1,28 @@
+.header {
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav {
+    display: flex !important;
+    margin: 0;
+    padding: 5px 0px;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+  
+  .nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .nav li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+  }
+  
+  .nav li a.active {
+    color: #73e6ff;
+  }
