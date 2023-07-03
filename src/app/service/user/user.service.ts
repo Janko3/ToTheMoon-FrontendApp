@@ -10,6 +10,7 @@ import { LocalStorageService } from '../local-storage/local-storage.service';
 })
 export class UserService {
 private baseURL: string = "http://localhost:8080/api/users/whoami"
+
 currentUser : any;
   constructor(private httpClient: HttpClient,private localStorage:LocalStorageService) {
 
@@ -25,5 +26,9 @@ currentUser : any;
       this.currentUser = user;
       return user;
     }))
+   }
+   
+   updateUser(newUser: User): Observable<User>{
+    return this.httpClient.put<User>("http://localhost:8080/api/users/edit",newUser);
    }
 }

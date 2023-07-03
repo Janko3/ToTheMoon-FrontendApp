@@ -1,0 +1,45 @@
+<div class="home-content">
+<div class="create-group">
+<h2>Create Group</h2>
+        <form [formGroup]="createGroupForm" (ngSubmit)="createGroup()">
+            
+          <textarea
+          placeholder="Name"
+            formControlName="name"
+            required
+          ></textarea>
+          
+          <textarea
+          placeholder="Description"
+            formControlName="description"
+            required
+          ></textarea>
+          <button type="submit">Add</button>
+        </form>
+    </div>
+    <ng-template #viewMode>
+    <div class="feed">
+        <div *ngFor="let group of groups" class="group">
+          <p>{{ group.name }}</p>
+          <p>{{group.description}}</p>
+          <button (click)="delete(group.id)">Suspend</button>
+          <button (click)="update(group.id)">Update</button>
+        </div>
+      </div>
+    </ng-template>  
+      <ng-container *ngIf="isEditing; else viewMode" >
+        <form [formGroup]="updateGroupFrom" (ngSubmit)="saveUpdate()">
+            
+            <textarea placeholder="Name" 
+              formControlName="name"
+              required
+            ></textarea>
+           
+            <textarea
+            placeholder="Description"
+              required
+            ></textarea>
+            <button type="submit">Add</button>
+          </form>
+    </ng-container>
+</div>

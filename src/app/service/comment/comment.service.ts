@@ -12,8 +12,8 @@ export class CommentService {
 
   constructor(private http: HttpClient) { }
 
-  createComment(commentData: CreateCommentDto, postId: string, owner?: string): Observable<CommentDTO> {
-    const url = this.apiUrl.replace('{id}', postId);
+  createComment(commentData: CreateCommentDto, postId: number, owner?: number): Observable<CommentDTO> {
+    const url = this.apiUrl.replace('{id}', postId.toString());
     const params = { owner: owner || '' };
     return this.http.post<CommentDTO>(url, commentData, { params });
   }

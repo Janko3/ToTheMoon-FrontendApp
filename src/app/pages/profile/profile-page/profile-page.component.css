@@ -28,8 +28,8 @@ body {
   
   .profile-pic-container {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
@@ -74,4 +74,42 @@ body {
   
   .info p {
     margin-bottom: 10px;
+  }
+  .create-group {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  button[type="submit"] {
+    display: block;
+    width: 50px;
+    padding: 10px;
+    background-color:#73e6ff ;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .home-content {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .feed {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .group p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #333333;
   }

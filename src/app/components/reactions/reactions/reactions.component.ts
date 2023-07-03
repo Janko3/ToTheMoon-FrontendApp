@@ -62,10 +62,10 @@ export class ReactionsComponent {
   }
   like(){
      if(this.isLikeClicked){
-      console.log(this.reactionId);
-      
+      console.log(this.reactionId);      
       this.reactionService.deleteReaction(this.reactionId).subscribe({next(value) {
         console.log(value);
+        window.location.reload();
       },
     error(err) {
       console.log(err);
@@ -74,48 +74,69 @@ export class ReactionsComponent {
      else{
       this.reactionService.createReaction("LIKE",this.postId,this.commentId).subscribe({
         next(value) {
+          console.log(value);         
+        },
+        error(err) {
+          console.log(err);         
+        }
+      });
+      this.isLikeClicked = !this.isLikeClicked;
+      window.location.reload();
+     }
+  }
+  dislike(){
+      if(this.isDislikeClicked){
+      console.log(this.reactionId);
+      
+      this.reactionService.deleteReaction(this.reactionId).subscribe({next(value) {
+        console.log(value);
+        window.location.reload();
+        
+      },
+    error(err) {
+      console.log(err);
+    },})
+     }
+     else{
+      this.reactionService.createReaction("DISLIKE",this.postId,this.commentId).subscribe({
+        next(value) {
           console.log(value);
           
         },
         error(err) {
-          console.log(err);
-          
+          console.log(err);         
         }
       });
-      this.isLikeClicked = !this.isLikeClicked;
+      this.isDislikeClicked = !this.isDislikeClicked;
+      window.location.reload();
      }
   }
-  dislike(){
-    if(this.postId || this.commentId){
-      
-        this.reactionService.createReaction("DISLIKE",this.postId,this.commentId).subscribe({
-          next(value) {
-            console.log(value);
-            
-          },
-          error(err) {
-            console.log(err);
-            
-          }
-        });
-        this.isDislikeClicked = !this.isDislikeClicked;
-      
-      
-    }
-  }
   heart(){
-    if(this.postId || this.commentId){
+    if(this.isHeartClicked){
+      console.log(this.reactionId);
+      
+      this.reactionService.deleteReaction(this.reactionId).subscribe({next(value) {
+        console.log(value);
+        window.location.reload();
+        
+      },
+    error(err) {
+      console.log(err);
+    },})
+     }
+     else{
       this.reactionService.createReaction("HEART",this.postId,this.commentId).subscribe({
         next(value) {
           console.log(value);
           
         },
         error(err) {
-          console.log(err);
-          
+          console.log(err);         
         }
       });
       this.isHeartClicked = !this.isHeartClicked;
-    }
-  }
+      window.location.reload();
+     }
+    
+}
 }

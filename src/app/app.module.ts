@@ -19,6 +19,9 @@ import { HeaderComponent } from './components/header/header/header.component';
 import { UpdateBtnComponent } from './components/updateBtn/update-btn/update-btn.component';
 import { ReactionsComponent } from './components/reactions/reactions/reactions.component';
 import { CommentComponent } from './components/comment/comment/comment.component';
+import { GroupComponent } from './components/group/group/group.component';
+import { GroupPageComponent } from './pages/group-page/group-page/group-page.component';
+import { UpdateProfilComponent } from './pages/update-profil/update-profil/update-profil.component';
 
 
 @NgModule({
@@ -36,6 +39,9 @@ import { CommentComponent } from './components/comment/comment/comment.component
     UpdateBtnComponent,
     ReactionsComponent,
     CommentComponent,
+    GroupComponent,
+    GroupPageComponent,
+    UpdateProfilComponent,
     
   ],
   imports: [
