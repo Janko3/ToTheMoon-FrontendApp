@@ -17,6 +17,8 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { DeleteBtnComponent } from './components/deleteBtn/delete-btn/delete-btn.component';
 import { HeaderComponent } from './components/header/header/header.component';
 import { UpdateBtnComponent } from './components/updateBtn/update-btn/update-btn.component';
+import { ReactionsComponent } from './components/reactions/reactions/reactions.component';
+import { CommentComponent } from './components/comment/comment/comment.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { UpdateBtnComponent } from './components/updateBtn/update-btn/update-btn
     DeleteBtnComponent,
     HeaderComponent,
     UpdateBtnComponent,
+    ReactionsComponent,
+    CommentComponent,
     
   ],
   imports: [

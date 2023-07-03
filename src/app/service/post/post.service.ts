@@ -29,7 +29,7 @@ export class PostService {
 
   updatePost(newPost: Post): Observable<Post> {
     const url = `${this.apiUrl}/${newPost.id}`;
-    return this.http.put<Post>(url, newPost);
+    return this.http.put<Post>(url, {...newPost});
   }
 
   deletePost(id: number): Observable<Post> {

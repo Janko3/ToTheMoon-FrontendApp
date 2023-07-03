@@ -1,0 +1,13 @@
+button{
+    color: #333333;
+    font-weight: bold;
+    width: auto;
+    cursor: pointer;
+}
+button :focus{
+    outline: none;
+}
+.clicked {
+    color: #73e6ff ;
+  }
+  

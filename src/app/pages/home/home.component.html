@@ -10,7 +10,7 @@
     <div class="home-content">
      <div class="user-cont">
         <div class="profile-pic"></div>
-        <div class="user-part">{{ user.username }}</div>
+        <div *ngIf="user" class="user-part">{{ user.username }}</div>
       </div>
       <div class="create-post">
         <h2>Create Post</h2>

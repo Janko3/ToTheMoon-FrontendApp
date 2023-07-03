@@ -2,7 +2,7 @@
     <ul class="nav">
     <div>
       <li><a href="http://localhost:4200/home">Home</a></li>
-      <li><a href="http://localhost:4200/profile/{{user.id}}" class="active">Profile</a></li>
+      <li *ngIf="user"><a href="http://localhost:4200/profile/{{user.id}}" class="active">Profile</a></li>
     </div>
       <li><app-logout></app-logout></li>
     </ul>

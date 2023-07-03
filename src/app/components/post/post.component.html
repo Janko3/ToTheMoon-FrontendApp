@@ -2,16 +2,18 @@
   <div class="post-content"></div>
   <div class="post-meta">
     <ng-container *ngIf="isEditing; else viewMode">
-      <span class="post-author">{{ post.user.username }}</span>
-      <input class="content" [value]="post.content" />
-      <span class="post-date">{{ post.creationDate.slice(0, 16) }}</span>
+      <form [formGroup]="updatePostForm" (ngSubmit)="saveUpdate()">
+      <input id="content" name="content" formControlName="content" />
+      <button type="submit">Save</button>
+    </form>
     </ng-container>
     <ng-template #viewMode>
       <span class="post-author">{{ post.user.username }}</span>
       <span class="content">{{ post.content }}</span>
       <span class="post-date">{{ post.creationDate.slice(0, 16) }}</span>
+      <button (click)="changeEditingState()">Update</button>
     </ng-template>    
-    <app-update-btn  [post]="post" ></app-update-btn>
     <app-delete-btn [postId]="post.id"></app-delete-btn>
+    <app-reactions  [postId]="post.id"></app-reactions>
   </div>
 </div>

@@ -13,16 +13,6 @@ export class UpdateBtnComponent {
   constructor(private postService: PostService,private postComponent: PostComponent) {}
 
   update(): void{
-    if(this.post){
-      this.postService.updatePost(this.post).subscribe(
-        (updatePost: Post)=>{
-        this.postComponent.isEditing = true;
-      },
-      (error) => {
-
-      }
-      );
-    }
+    this.postComponent.isEditing = true;
   }
-
 }
